@@ -1,0 +1,38 @@
+比较重要的特征：
+1、walkDistance:总行走路程
+2、numGroups一场比赛有记录的队伍数：貌似使用后对模型提升有帮助
+3、matchType：squad-fpp、duo-fpp、squad、solo-fpp、duo、solo
+4、boosts: 使用加速器的个数
+5、weaponsAcquired：获得武器的数量
+6、damageDealt：总伤害量
+7、kills：杀人数、
+8、killStreaks：连杀数
+9、rideDistance:骑行距离
+10、assists:助攻数
+11、DBNOS：击倒数
+12、headshotKills：爆头数
+13、swimDistance：游泳距离
+14、killPlace：杀人数的排行
+15、heals：用药数
+16、revives：救人数
+
+
+构造新特征：
+1、distance =  swimDistance + rideDistance
+2、engage
+一般的特征：
+1、longestKill
+
+不怎么重要的特征：
+1、vehicleDestroys - 汽车毁坏数
+2、roadKills - Number of kills while in a vehicle.
+3、teamKills - Number of times this player killed a teammate.
+4、matchDuration:比赛时间
+
+
+奇怪的特征：
+1、maxPlace:Worst placement we have data for in the match. This may not match with numGroups, as sometimes the data skips over placements.
+2、killPoints - Kills-based external ranking of player. (Think of this as an Elo ranking where only kills matter.) If there is a value other than -1 in rankPoints, then any 0 in killPoints should be treated as a “None”.
+3、winPoints - Win-based external ranking of player. (Think of this as an Elo ranking where only winning matters.) If there is a value other than -1 in rankPoints, then any 0 in winPoints should be treated as a “None”.
+4、rankPoints - Elo-like ranking of player. This ranking is inconsistent and is being deprecated in the API’s next version, so use with caution. Value of -1 takes place of “None”.
+

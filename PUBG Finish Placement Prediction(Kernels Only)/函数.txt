@@ -1,0 +1,13 @@
+1、pandas議query
+2、df.groupby().size()
+3、Series.to_frame('')
+4、describe()toTapleList([''])
+5、fig, ax = plt.subplots(1, 2, figsize = (12, 4))
+6、pd.any()痕方
+7、zip痕方()
+8、ax.ravel()
+9\sub = train_data.loc[~train_data['matchType'].str.contains('solo'),['winPlacePerc',col]].copy()
+10\ax.ravel()
+11、dataframe.select_dtypes(include='number')
+12\match_data = pd.merge(match_data, group[sum_col].sum().rename(columns=lambda s:'sum.'+s).reset_index())
+13\reset_index
