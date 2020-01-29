@@ -1,0 +1,40 @@
+export JAVA_HOME=/usr/local/java/jdk1.8.0_201
+export JRE_HOME=/usr/local/java/jdk1.8.0_201/jre
+export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$JAVA_HOME:$PATH
+export JDK_HOME=/usr/local/java/jdk1.8.0_201
+
+#%% 在spark-env.sh结尾添加
+export SCALA_HOME=/usr/local/scala
+export JAVA_HOME=/usr/local/java/jdk1.8.0_77
+
+
+#%% 加入Anaconda路径
+export PATH=/root/anaconda3/bin:$PATH
+export ANACONDA_PATH=/root/anaconda3/bin
+
+#%% 加入pyspark设置
+export PYSPARK_DRIVER_PYTHON=$ANACONDA_PATH/bin/ipython
+export PYSPARK_PYTHON=$ANACONDA_PATH/bin/python
+
+'sha1:4d7a88c23d60:189abfd78832d5b23c4ca898c0afbbbd9b205ad5'
+
+
+#%% 运行IPython Notebook 以使用 Spark
+PYSPARK_DRIVER_PYTHON=ipython PYSPARK_DRIVER_PYTHON_OPTS="notebook" master=spark://master:7077 pyspark --total-executor-cores 1 --executor-memory 1024m
+
+#%% Spark参数调优
+export SPARK_MASTER_IP=master
+export SPARK_WORKER_CORES=2
+export SPARK_WORKER_MEMORY=3G
+export SPARK_WORKER_INSTANCES=1
+
+hosts
+192.168.0.63  master
+192.168.0.242 slave1
+192.168.6.101 slave2
+192.168.6.54   slave3
+
+
+
+

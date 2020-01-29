@@ -1,0 +1,63 @@
+1、sns.countplot
+2、能否将回归和分类结合起来
+3、能否将猫和狗分组
+4、pd.crosstab(train['No_name'], train['AdoptionSpeed'], normalize='index')
+5、plt.rcParams['figure.figsize'] = (12, 9)
+6、plt.tight_layout()：tight_layout会自动调整子图参数，使之填充整个图像区域。
+7、train_test_split的stratify参数
+8、pd.assign(A=B) 给pd增加一列，数据为B
+9、from joblib import Parallel, delayed
+10、file_sentences_sentiment = file_sentences_sentiment.add_prefix('document_').to_dict()
+11、train_dfs_sentiment = pd.concat(train_dfs_sentiment, ignore_index=True, sort=False)
+       这里train_dfs_sentiment可以是列表
+12、add_prefix
+13、pd.factorize（）[0]
+14、print("\nValid Counts = ", Counter(X_train['AdoptionSpeed'].values))
+
+
+
+
+preprocessing_pipeline = build_preprocessing_pipeline()
+X_train_preprocessed = preprocessing_pipeline.fit_transform(X_train, y_train)
+X_val_preprocessed = preprocessing_pipeline.transform(X_val)
+
+X_train_preprocessed.head(10)
+
+1.1 估计器（Estimator）
+估计器，很多时候可以直接理解成分类器，主要包含两个函数：
+
+
+fit()：训练算法，设置内部参数。接收训练集和类别两个参数。
+
+predict()：预测测试集类别，参数为测试集。
+
+大多数scikit-learn估计器接收和输出的数据格式均为numpy数组或类似格式。
+
+1.2 转换器（Transformer）
+转换器用于数据预处理和数据转换，主要是三个方法：
+
+fit()：训练算法，设置内部参数。
+transform()：数据转换。
+fit_transform()：合并fit和transform两个方法。
+
+1.3 流水线（Pipeline）
+sklearn.pipeline包
+
+流水线的功能：
+跟踪记录各步骤的操作（以方便地重现实验结果）
+对各步骤进行一个封装
+确保代码的复杂程度不至于超出掌控范围
+
+基本使用方法
+流水线的输入为一连串的数据挖掘步骤，其中最后一步必须是估计器，前几步是转换器。输入的数据集经过转换器的处理后，输出的结果作为下一步的输入。最后，用位于流水线最后一步的估计器对数据进行分类。
+每一步都用元组（ ‘名称’，步骤）来表示。现在来创建流水线。
+
+Python的sklearn.pipeline.Pipeline()函数可以把多个“处理数据的节点”按顺序打包在一起，数据在前一个节点处理之后的结果，转到下一个节点处理。除了最后一个节点外，其他节点都必须实现'fit()'和'transform()'方法， 最后一个节点需要实现fit()方法即可。当训练样本数据送进Pipeline进行处理时， 它会逐个调用节点的fit()和transform()方法，然后点用最后一个节点的fit()方法来拟合数据。
+
+
+Analyze feature importance
+Train RandomForestClassifier to compute feature_importances_. Note that one can access the attributes of any transformer in the pipeline via named_steps attribute containing a dictionary of, well, named steps of the pipeline. For example, to access the column names via the DataFrameToValuesTransformer class and its attributes_ attribute:
+
+exploratory data analysis 探索性数据分析;
+
+
