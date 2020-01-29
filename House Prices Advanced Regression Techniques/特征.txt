@@ -1,0 +1,160 @@
+一般的特征
+1、MSSubClass: 建筑的等级，类型：类别型
+2、LotConfig: 房屋配置，类型：类别型
+3、LandContour: 平整度级别，类型：类别型
+4、Condition1: 主干道或者铁路便利程度，类型：类别型
+5、Condition2: 主干道或者铁路便利程度，类型：类别型
+6、BldgType: 住宅类型，类型：类别型
+7、MasVnrType: 砌体饰面类型，类型：类别型
+8、BsmtCond: 地下室概况，类型：类别型
+9、BsmtExposure: 花园地下室墙，类型：类别型
+10、BsmtFinType2: 地下室装饰质量，类型：类别型
+11、BsmtFinSF2: 地下室装饰面积，类型：类别型
+12、BsmtUnfSF: 未装饰的地下室面积，类型：数值型，单位：平方英尺
+13、2ndFlrSF: 二层面积，类型：数值型，单位：平方英尺
+14、BedroomAbvGr: 地下室以上的卧室数量，类型：数值
+15、GarageType: 车库位置，类型：类别型
+16、MoSold: 卖出月份，类别：数值型
+17、YrSold: 卖出年份，类别：数值型
+
+缺失太多、不平衡的特征
+1、LotFrontage: 距离街道的直线距离，类型：数值型，单位：英尺 但很有用
+2、Street: 街道类型，类型：类别型
+3、Alley: 巷子类型，类型：类别型
+4、Utilities: 公共设施类型，类型：类别型
+5、LandSlope: 倾斜度，类型：类别型
+6、RoofMatl: 屋顶材料，类型：类别型
+7、ExterCond: 外部材料的现状，类型：类别型
+8、Heating: 供暖类型，类型：类别型
+9、LowQualFinSF: 低质装饰面积，类型：数值型，单位：平方英尺
+10、BsmtHalfBath: 地下室半浴室，类型：数值
+11、PoolArea: 泳池面积，类型：数值型，单位：平方英尺
+12、PoolQC:泳池质量，类型：类别型
+13、Fence: 围墙质量，类型：类别型
+14、MiscFeature: 其他特征，类型：类别型
+15、MiscVal: 其他杂项特征值，类型：类别型
+
+
+
+
+重要的特征
+1、MSZoning: 区域分类，类型：类别型
+2、LotArea: 地皮面积，类型：数值型，单位：平方英尺
+3、LotShape: 房子整体形状，类型：类别型
+4、Neighborhood: 市区物理位置，类型：类别型
+5、HouseStyle: 住宅风格，类型：类别型
+6、OverallQual: 整体材料和饰面质量，类型：数值型（类型数字）
+7、OverallCond: 总体状况评价，类型：数值型（类型数字）
+8、YearBuilt: 建筑年份，类型：数值型
+9、YearRemodAdd: 改建年份，类型：数值型
+10、RoofStyle: 屋顶类型，类型：类别型
+11、Exterior1st: 住宅外墙，类型：类别型
+12、Exterior2nd: 住宅外墙，类型：类别型
+13、MasVnrArea: 砌体饰面面积，类型：数值型，单位：平方英尺 （可变成2_1变量）
+14、ExterQual: 外部材料质量，类型：类别型
+15、Foundation: 地基类型，类型：类别型
+16、BsmtQual: 地下室高度，类型：类别型
+17、BsmtFinType1: 地下室装饰质量，类型：类别型
+18、BsmtFinSF1: 地下室装饰面积，类型：类别型
+19、TotalBsmtSF: 地下室总面积，类型：数值型，单位：平方英尺
+20、HeatingQC: 供暖质量和条件，类型：类别型
+21、CentralAir: 中央空调状况，类型：类别型
+22、Electrical: 电力系统，类型：类别型（可分成0-1变量）
+23、1stFlrSF: 首层面积，类型：数值型，单位：平方英尺
+24、GrLivArea: 地面以上居住面积，类型：数值型，单位：平方英尺
+25、BsmtFullBath: 地下室全浴室，类型：数值
+26、FullBath: 高档全浴室，类型：数值（类型数字）
+27、HalfBath: 高档半浴室，类型：数值
+28、KitchenAbvGr: 厨房数量，类型：数值
+29、KitchenQual: 厨房质量，类型：类别型
+30、TotRmsAbvGrd: 地上除卧室以外的房间数，类型：数值
+31、Functional: 房屋功用性评级，类型：类别型
+32、Fireplaces: 壁炉数量，类型：数值
+33、FireplaceQu: 壁炉质量，类型：类别型
+34、GarageYrBlt: 车库建造年份，类别：数值型
+35、GarageFinish: 车库内饰，类型：类别型
+36、GarageCars: 车库车容量大小，类别：数值型
+37、GarageArea: 车库面积，类别：数值型，单位：平方英尺
+38、GarageCond: 车库条件，类型：类别型
+39、GarageQual: 车库质量，类型：类别型
+40、PavedDrive: 铺的车道情况，类型：类别型
+41、WoodDeckSF: 木地板面积，类型：数值型，单位：平方英尺 （可以分成0-1变量）
+42、OpenPorchSF: 开放式门廊区面积，类型：数值型，单位：平方英尺（可以分成0-1变量）
+43、EnclosedPorch: 封闭式门廊区面积，类型：数值型，单位：平方英尺（可以分成0-1变量）
+44、3SsnPorch: 三个季节门廊面积，类型：数值型，单位：平方英尺（可以分成0-1变量）
+45、ScreenPorch: 纱门门廊面积，类型：数值型，单位：平方英尺（可以分成0-1变量）
+46、SaleType: 交易类型，类型：类别型
+47、SaleCondition: 交易条件，类型：类别型
+
+
+质量形参数：
+Ex
+Gd
+TA
+Fa
+Po
+ExterQual外部材料质量
+BsmtQualBsmtQual
+BsmtCond地下室概况
+HeatingQC供暖质量和条件
+KitchenQual厨房质量
+FireplaceQu 壁炉质量
+GarageQual 车库质量
+GarageCond 车库条件
+
+
+共线性强的特征：
+1、OverallQual 整体质量 数值
+2、GrLivArea 地面以上居住面积
+3、GarageCars 车库车容量大小
+4、GarageArea 车库面积
+5、TotalBsmtSF 地面室总面积
+6、1stFlrSF 首层面积
+7、FullBath 高档全浴室
+8、TotRmsAbvGrd 地上除卧室以外的房间数
+9、YearBuilt 建造年份
+10、YearRemodAll 改建年份
+11、GarageYrBlt 车库建造年份
+12、MasVnrArea 砌体饰面面积
+13、Fireplaces 壁炉数量
+14、BsmtFinSF1 地下室装饰面积
+
+重要特征排序：
+1、GrLivArea 居住面积
+2、LotArea 地皮面积
+3、TotalBsmtSF 地下室总面积
+4、GarageArea  车库总面积
+5、BsmtFinSF1  地下室装饰面积
+6、1stFlrSF 首层面积
+7、YearBuilt 
+8、2ndFlrSF 二层面积
+9、OverallCond
+10、YearRemodAdd
+11、OverallQual
+12、Mosold
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
